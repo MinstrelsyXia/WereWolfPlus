@@ -91,7 +91,7 @@ def map_ai_build(build_string):
     }
     return build_map.get(build_string, AIBuild.RandomBuild)  # If no corresponding difficulty is found, return randombuild
 
-HF_TOKEN = "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"
+HF_TOKEN = ""
 HF_EMBEDDING_SBERT_CHINESE = {
     # https://huggingface.co/uer/sbert-base-chinese-nli
     "model_id": "uer/sbert-base-chinese-nli",
