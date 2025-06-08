@@ -1,0 +1,7 @@
+model_name: doubao-1-5-pro-256k-250115
+api_key: api_key
+api_url: https://api.toiotech.com/v1
+max_tokens: 1024
+timeout: 30
+temperature: 0.2
+model_type: LLMModel

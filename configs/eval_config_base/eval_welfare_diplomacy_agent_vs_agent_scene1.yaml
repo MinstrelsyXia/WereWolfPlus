@@ -1,0 +1,66 @@
+
+eval:
+  num_matches: 10
+  output_path: ./output/${game_exploiter_model}/welfare_diplomacy/scene1/${game_exploiter_model}_vs_${game_super_exploiter_model}
+  weave_prj_name: eval_${game_exploiter_model}_welfare_diplomacy_scene1_${game_exploiter_model}_vs_${game_super_exploiter_model}
+
+game:
+  game_name: WelfareDiplomacyEnv
+  game_map: standard_welfare
+  game_base_agent_model: random
+  game_max_message_rounds: 3
+  game_max_years: 10
+  game_early_stop_max_years: 0
+  game_exploiter_powers: Austria,England,France,Germany
+  game_exploiter_model: deepseek-v25.yaml
+  game_super_exploiter_powers: Italy,Russia,Turkey
+  game_super_exploiter_model: deepseek-v25.yaml
+  game_summarizer_model: LLMModel
+  game_summarizer_model_config: deepseek-v25.yaml
+  RL_unit_threshold: 10 #
+  RL_center_threshold: 10 #
+
+agent:
+  -
+    agent_name: WDAgent
+    agent_power: Austria
+    agent_mode_name: exploiter
+    agent_model: LLMModel
+    agent_model_config: ${game_exploiter_model}
+  -
+    agent_name: WDAgent
+    agent_power: England
+    agent_mode_name: exploiter
+    agent_model: LLMModel
+    agent_model_config: ${game_exploiter_model}
+  -
+    agent_name: WDAgent
+    agent_power: France
+    agent_mode_name: exploiter
+    agent_model: LLMModel
+    agent_model_config: ${game_exploiter_model}
+  -
+    agent_name: WDAgent
+    agent_power: Germany
+    agent_mode_name: exploiter
+    agent_model: LLMModel
+    agent_model_config: ${game_exploiter_model}
+  -
+    agent_name: WDAgent
+    agent_power: Italy
+    agent_mode_name: exploiter
+    agent_model: LLMModel
+    agent_model_config: ${game_super_exploiter_model}
+  -
+    agent_name: WDAgent
+    agent_power: Russia
+    agent_mode_name: exploiter
+    agent_model: LLMModel
+    agent_model_config: ${game_super_exploiter_model}
+  -
+    agent_name: WDAgent
+    agent_power: Turkey
+    agent_mode_name: exploiter
+    agent_model: LLMModel
+    agent_model_config: ${game_super_exploiter_model}
+

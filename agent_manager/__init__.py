@@ -1,0 +1,3 @@
+from agent_manager.prompts.starcraft2_prompt import StarCraftIIPrompt_V4
+from agent_manager.prompts.stratego_prompt import StategoPrompt
+from agent_manager.prompts.streetfight3_prompt import StreetFight3Prompt

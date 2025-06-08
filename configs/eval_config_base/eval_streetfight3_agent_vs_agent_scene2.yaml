@@ -1,0 +1,22 @@
+
+eval:
+  num_matches: 10
+  output_path: ./output/${agent_model_config/0}/streetfight3/scene2/${agent_model_config/0}_vs_${agent_model_config_opp/0}_asy${asynch_mode}
+  weave_prj_name: eval_${agent_model_config/0}_streetfight3_scene2_${agent_model_config/0}_vs_${agent_model_config_opp/0}_asy${asynch_mode}
+
+
+game:
+  game_name: StreetFight3Env
+  game_mode: agent_vs_agent
+  asynch_mode: False
+
+agent:
+  -
+    agent_name: StreetFight3Agent
+    agent_model: LLMModel
+    agent_model_config: o1-mini.yaml
+    agent_prompt: StreetFight3Prompt
+
+    agent_model_opp: LLMModel
+    agent_model_config_opp: gpt-4o-mini.yaml
+    agent_prompt_opp: StreetFight3Prompt

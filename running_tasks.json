@@ -1,0 +1,38 @@
+[
+    {
+        "pid": 45704,
+        "task_name": "deepseek-v1_vs_doubao",
+        "output_file": "output_backup/deepseek-v1_vs_doubao_2025-06-04_19-53-46.txt",
+        "start_time": "2025-06-04_19-53-46"
+    },
+    {
+        "pid": 54716,
+        "task_name": "doubao_vs_gpt_4o",
+        "output_file": "output_backup/doubao_vs_gpt_4o_2025-06-04_19-53-46.txt",
+        "start_time": "2025-06-04_19-53-46"
+    },
+    {
+        "pid": 48068,
+        "task_name": "deepseek-v1_vs_gpt_4o",
+        "output_file": "output_backup/deepseek-v1_vs_gpt_4o_2025-06-04_19-53-46.txt",
+        "start_time": "2025-06-04_19-53-46"
+    },
+    {
+        "pid": 28896,
+        "task_name": "doubao_vs_deepseek-v1",
+        "output_file": "output_backup/doubao_vs_deepseek-v1_2025-06-05_14-29-05.txt",
+        "start_time": "2025-06-05_14-29-05"
+    },
+    {
+        "pid": 25968,
+        "task_name": "gpt_4o_vs_deepseek-v1",
+        "output_file": "output_backup/gpt_4o_vs_deepseek-v1_2025-06-05_14-29-05.txt",
+        "start_time": "2025-06-05_14-29-05"
+    },
+    {
+        "pid": 28884,
+        "task_name": "gpt_4o_vs_doubao",
+        "output_file": "output_backup/gpt_4o_vs_doubao_2025-06-05_14-29-05.txt",
+        "start_time": "2025-06-05_14-29-05"
+    }
+]

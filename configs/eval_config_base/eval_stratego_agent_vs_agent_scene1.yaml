@@ -1,0 +1,21 @@
+
+eval:
+  num_matches: 10
+  output_path: ./output/${agent_model_config/0}/stratego/scene1/${agent_model_config/0}_vs_${agent_model_config_opp/0}_${game_init}
+  weave_prj_name: eval_${agent_model_config/0}_stratego_scene1_${agent_model_config/0}_vs_${agent_model_config_opp/0}_${game_init}
+
+game:
+  game_name: StrategoMultiAgentEnv
+  game_mode: agent_vs_agent
+  game_init: random
+
+agent:
+  -
+    agent_name: StrategoAgent
+    agent_model: LLMModel
+    agent_model_config: gpt-35-turbo-0125.yaml
+    agent_prompt: StategoPrompt
+
+    agent_model_opp: LLMModel
+    agent_model_config_opp: gpt-4o-mini.yaml
+    agent_prompt_opp: StategoPrompt

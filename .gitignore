@@ -1,0 +1,11 @@
+# Git ignore patterns
+*.pyc
+*.nbc
+*.nbi
+wandb/
+*.log
+checkpoint/
+checkpoints/
+games/werewolf/visual/logs/
+output*/
+*.zip

@@ -1,0 +1,21 @@
+
+eval:
+  num_matches: 10
+  output_path: ./output/${agent_model_config/0}/civ/scene3/${agent_model_config/0}_run_${game_map}
+  weave_prj_name: eval_${agent_model_config/0}_civ_scene3_agent_run_${game_map}
+
+game:
+  game_name: CivEnv
+  game_map: myagent_T1_BRITISHAISLES
+  game_turn: 400
+
+agent:
+  -
+    agent_name: MastabaAgent
+    agent_model: LLMModel
+    agent_model_config: deepseek-v25.yaml
+    pinecone_key: 4dc46cc0-9dda-4049-aeab-cfc2962ae192
+    agent_embedding_model_name: text-embedding-ada-002
+    agent_embedding_api_key: sk-sufonZ4mNq9h9SDq7e311aA6C31c40A1BaB5369481D96cFf
+    agent_embedding_api_url: https://api.openai.com
+

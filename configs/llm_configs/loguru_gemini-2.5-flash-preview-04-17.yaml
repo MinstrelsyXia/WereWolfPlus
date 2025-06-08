@@ -1,0 +1,9 @@
+model_name: gemini-2.5-flash-preview-04-17
+api_key: api_key
+api_url: https://api.toiotech.com/v1
+max_tokens: 1024
+timeout: 30
+temperature: 0.2
+model_type: LLMModel
+extra_body:
+  reasoning_effort: low

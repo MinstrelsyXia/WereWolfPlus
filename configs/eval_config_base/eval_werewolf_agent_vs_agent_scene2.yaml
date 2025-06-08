@@ -1,0 +1,53 @@
+
+eval:
+  num_matches: 10
+  output_path: ./output/${good_model_config}/werewolf/scene2/${good_model_config}_vs_${bad_model_config}
+  weave_prj_name: eval_${good_model_config}_werewolf_scene2_${good_model_config}_vs_${bad_model_config}
+
+game:
+  game_name: WereWolfEnv
+  good_model_config: deepseek-v25.yaml
+  bad_model_config: gpt-4o-mini.yaml
+
+agent:
+  -
+    agent_name: WereWolfAgent
+    agent_nick: Seer
+    agent_model: LLMModel
+    agent_model_config: ${good_model_config}
+  -
+    agent_name: WereWolfAgent
+    agent_nick: Doctor
+    agent_model: LLMModel
+    agent_model_config: ${good_model_config}
+  -
+    agent_name: WereWolfAgent
+    agent_nick: Villager
+    agent_model: LLMModel
+    agent_model_config: ${good_model_config}
+  -
+    agent_name: WereWolfAgent
+    agent_nick: Villager
+    agent_model: LLMModel
+    agent_model_config: ${good_model_config}
+  -
+    agent_name: WereWolfAgent
+    agent_nick: Villager
+    agent_model: LLMModel
+    agent_model_config: ${good_model_config}
+  -
+    agent_name: WereWolfAgent
+    agent_nick: Villager
+    agent_model: LLMModel
+    agent_model_config: ${good_model_config}
+
+  -
+    agent_name: WereWolfAgent
+    agent_nick: Werewolf
+    agent_model: LLMModel
+    agent_model_config: ${bad_model_config}
+  -
+    agent_name: WereWolfAgent
+    agent_nick: Werewolf
+    agent_model: LLMModel
+    agent_model_config: ${bad_model_config}

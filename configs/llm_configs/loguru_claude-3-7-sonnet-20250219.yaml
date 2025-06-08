@@ -1,0 +1,11 @@
+model_name: claude-3-7-sonnet-20250219
+api_key: api_key
+api_url: https://api.toiotech.com/v1
+max_tokens: 1024
+timeout: 30
+temperature: 0.2
+model_type: LLMModel
+extra_body:
+  thinking:
+    type: enabled
+    budget_tokens: 20

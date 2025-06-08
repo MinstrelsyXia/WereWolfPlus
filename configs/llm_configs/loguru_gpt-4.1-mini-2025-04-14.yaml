@@ -1,0 +1,7 @@
+model_name: gpt-4.1-mini-2025-04-14
+api_key: api_key
+api_url: https://api.toiotech.com/v1
+max_tokens: 1024
+timeout: 30
+temperature: 0.2
+model_type: LLMModel

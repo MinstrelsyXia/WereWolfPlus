@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "调试狼人杀游戏",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/multiprocess_eval_tasks.py",
+            "args": [
+                "--tasks", "deepseek-v1_vs_doubao_9_helms",
+                "--cfg_path", "configs/eval_configs/",
+                "--runs_log_path", "./output/debug_runs_log.txt"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "python": "C:\\anaconda\\envs\\dsgbench\\python.exe",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "调试所有任务",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/multiprocess_eval_tasks.py",
+            "args": [
+                "--tasks", "all",
+                "--cfg_path", "configs/eval_configs/",
+                "--runs_log_path", "./output/debug_runs_log.txt"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "python": "C:\\anaconda\\envs\\dsgbench\\python.exe",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        }
+    ]
+}

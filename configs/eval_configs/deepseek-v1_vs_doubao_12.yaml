@@ -1,0 +1,90 @@
+# refer to configs\eval_configs\eval_deepseek-v25_werewolf_scene1_deepseek-v25_vs_gpt-4o-mini.yaml
+# 12 人局
+use_message_pool: false
+message_pool_args:
+  human_in_combat: false
+  load_exps_from: "checkpoints/test/exps.pkl"
+  logs_path_to: "logs"
+  exps_path_to: "checkpoints/test/"
+  # current_game_number: 1
+  use_crossgame_exps: true
+  who_use_exps: 
+    - "werewolf"
+    - "villager"
+    - "seer"
+    - "witch"
+    - "guard"
+  exps_retrieval_threshold: 0.85
+  similar_exps_threshold: 0.1
+
+has_sheriff: False
+names:
+  - Derek
+  - Jackson
+  - Will
+  - Jacob
+  - Harold
+  - Sam
+  - Scott
+  - David
+  - Isaac
+  - Ginger
+  - Mason
+  - Cjy
+eval:
+  num_matches: 10
+  output_path: ./output_my/deepseek-v25/werewolf/scene1/deepseek-v25_vs_doubao_12
+  weave_prj_name: my_deepseek_r1_vs_doubao_12
+game:
+  game_name: WereWolfEnv
+  good_model_config: loguru_deepseek-r1-250120.yaml
+  bad_model_config: loguru_doubao-1-5-pro-256k-250115.yaml
+agent:
+- agent_name: WereWolfAgent
+  agent_nick: Seer
+  agent_model: LLMModel
+  agent_model_config: loguru_deepseek-r1-250120.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Witch
+  agent_model: LLMModel
+  agent_model_config: loguru_deepseek-r1-250120.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Guard
+  agent_model: LLMModel
+  agent_model_config: loguru_deepseek-r1-250120.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Hunter
+  agent_model: LLMModel
+  agent_model_config: loguru_deepseek-r1-250120.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Villager
+  agent_model: LLMModel
+  agent_model_config: loguru_deepseek-r1-250120.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Villager
+  agent_model: LLMModel
+  agent_model_config: loguru_deepseek-r1-250120.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Villager
+  agent_model: LLMModel
+  agent_model_config: loguru_deepseek-r1-250120.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Villager
+  agent_model: LLMModel
+  agent_model_config: loguru_deepseek-r1-250120.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Werewolf
+  agent_model: LLMModel
+  agent_model_config: loguru_doubao-1-5-pro-256k-250115.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Werewolf
+  agent_model: LLMModel
+  agent_model_config: loguru_doubao-1-5-pro-256k-250115.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Werewolf
+  agent_model: LLMModel
+  agent_model_config: loguru_doubao-1-5-pro-256k-250115.yaml
+- agent_name: WereWolfAgent
+  agent_nick: Werewolf
+  agent_model: LLMModel
+  agent_model_config: loguru_doubao-1-5-pro-256k-250115.yaml
